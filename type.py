@@ -8,7 +8,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 PATH_TO_CHROMEDRIVER = r'/path/to/your/chromedriver' 
 TYPERACER_URL = 'https://play.typeracer.com/'
-DELAY_MS = 2
+DELAY_MS = 8
 DELAY_POST = 100000
 
 def run():
@@ -20,7 +20,7 @@ def run():
 
     ##################### PART 2 #####################
     start_wait = WebDriverWait(chrome_driver, 30)
-    start_button = start_wait.until(element_to_be_clickable((By.XPATH, "//a[contains(.,'Enter a typing race')]")))
+    start_button = start_wait.until(element_to_be_clickable((By.XPATH, "//a[contains(.,'Enter a Typing Race')]")))
     start_button.click()
 
     ##################### PART 3 #####################
